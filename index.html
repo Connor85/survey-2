@@ -6,78 +6,62 @@
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Appointment Book</title>
+  <title>Online Survey</title>
 </head>
 <body>
-  <h1>Appointment Book</h1>
+  <h1>Please take a survey below:</h1>
   <div class="container">
-    <form action="successful.html" method="get">
+    <form id="survey">
       <div class="form-group">
-        <label for="name">Name:</label>
-        <input id="name" class="form-control" type="text">
+        <h2>What do you like to drink during lunch?</h2>
+        <select class="form-control" id="beverage">
+          <option></option>
+          <option>Coffee</option>
+          <option>Tea</option>
+          <option>Kombucha</option>
+          <option>Water</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="description">Description:</label>
-        <input id="description" class="form-control" type="text">
+        <h2>What do you like to eat for lunch?</h2>
+        <select class="form-control" id="food">
+          <option></option>
+          <option>sandwhich</option>
+          <option>ricebowl</option>
+          <option>salad</option>
+          <option>fried chicken</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="date">Date:</label>
-        <input id="date" class="form-control" type="text">
+        <h2>Select your favorite flavor of chip:</h2>
+        <div class="radio">
+          <label>
+            <input type="radio" name="chip" value="Cool Ranch" checked>
+            Cool Ranch
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="chip" value="Sea Salt & Vinegar">
+            Sea Salt & Vinegar
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="chip" value="Potato">
+            Potato
+          </label>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="start-time">Start Time:</label>
-        <input  id="start-time" class="form-control" type="text">
-      </div>
-      <div class="form-group">
-        <label for="end-time">End Time:</label>
-        <input id="end-time" class="form-control" type="text">
-      </div>
-      <button action="successful.html" type="submit" class="btn">Add</button>
+      <button type="submit" class="btn">Turn in Survey</button>
     </form>
-  </div>
-</div>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-<h1>MODAL START</h1>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <h1>I AM A MODAL</h1>
+    <div id="output">
+      <ul>
+        <li>Food: <span id="rfood"></span</li>
+        <li>Beverage: <span id="rbeverage"></span</li>
+        <li>Chip: <span id="rchip"></span</li>
+      </ul>
     </div>
   </div>
-</div>
-
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-  <!-- Modal -->
-  <div id="myModal" class="modal fade bd-example-modal-lg" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
